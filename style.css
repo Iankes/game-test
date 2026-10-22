@@ -4,25 +4,35 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #050505;
-  color: #a0a0a0;
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #050508;
   font-family: monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
 #ui {
-  margin-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
   text-align: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  border-radius: 8px;
+  pointer-events: none;
+  width: 90%;
+  max-width: 600px;
 }
 
 canvas {
-  border: 1px solid #222;
-  background-color: #111115; /* O chão do cenário */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: block;
+  touch-action: none; /* Evita gestos de rolagem da tela no celular ao tocar */
 }
